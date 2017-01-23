@@ -1,12 +1,12 @@
 -- Provides queue-like behavior to a class:
 queue = { buffer = {} }
 
-function queue.put(...)
-  for _, v in ipairs(arg) do
-	  table.insert(queue.buffer, 1, v)
+function queue.put(self, ...)
+  for _, v in ipairs({...}) do
+  	table.insert(self.buffer, 1, v)
 	end
 end
 
-function queue.next()
-	return table.remove(queue.buffer)
+function queue.next(self)
+	return table.remove(self.buffer)
 end
