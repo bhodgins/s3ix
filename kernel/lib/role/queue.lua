@@ -1,5 +1,5 @@
 -- Provides queue-like behavior to a class:
-queue = { buffer = {} }
+Queue = { buffer = {} }
 
 function queue.put(self, ...)
   for _, v in ipairs({...}) do
