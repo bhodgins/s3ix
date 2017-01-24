@@ -95,3 +95,10 @@ end
 local fh = io.open(config_env.BUILD_DESTDIR .. '/' .. config_env.BUILD_IMGNAME, 'wb')
 fh:write(image)
 fh:close()
+
+print("\nNew image '"
+	.. config_env.BUILD_IMGNAME
+	.. "' has been built and installed to '"
+	.. config_env.BUILD_DESTDIR
+	.. "'. Be sure to update \nyour bootloader config if necessary."
+	)

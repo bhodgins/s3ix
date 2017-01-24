@@ -15,16 +15,16 @@ service 'ocfs'				-- Open Computers managed disk filesystem
 
 -- Kernel / service options --
 
-BUILD_DESTDIR='build'
-BUILD_IMGNAME='EXAMPLE.kimage'
+BUILD_DESTDIR='boot'
+BUILD_IMGNAME='DEFAULT'
 S3IX_KNAME='My example kernel'
 
 
 -- DO NOT EDIT BELOW THIS LINE --
        -- DO NOT REMOVE --
 
-kernel 'kernel/main.lua'
-kernel 'kernel/entry.lua'
+kernel 'lib/core/main.lua'
+kernel 'lib/core/entry.lua'
 
 bootrd 'lib/vendor/middleclass/middleclass.lua'
-bootrd 'kernel/process.lua'
+bootrd 'lib/process.lua'
